@@ -27,8 +27,11 @@ CREATE TABLE `noticias` (
   `titulo` varchar(100) DEFAULT NULL,
   `noticia` text,
   `data_criacao` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `resumo` varchar(100) DEFAULT NULL,
+  `autor` varchar(30) DEFAULT NULL,
+  `data_noticia` date DEFAULT NULL,
   PRIMARY KEY (`id_noticias`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +40,7 @@ CREATE TABLE `noticias` (
 
 LOCK TABLES `noticias` WRITE;
 /*!40000 ALTER TABLE `noticias` DISABLE KEYS */;
-INSERT INTO `noticias` VALUES (1,'titulo da noticia','conteudo da noticia','2018-05-08 20:08:17'),(2,'outra noticia','conteudo da noticia','2018-05-08 20:34:42');
+INSERT INTO `noticias` VALUES (1,'titulo da noticia','conteudo da noticia','2018-05-08 20:08:17',NULL,NULL,NULL),(2,'outra noticia','conteudo da noticia','2018-05-08 20:34:42',NULL,NULL,NULL),(3,'teste','teste','2018-05-14 17:15:33','teste','teste','2018-05-14'),(4,'teste','teste','2018-05-14 17:16:12','teste','teste','2018-05-14'),(5,'teste3','teste','2018-05-14 17:16:32','teste','teste','2018-05-14'),(6,'zxzxz','asasassas','2018-05-14 17:49:04','zzxzxzxzxzzxzx','zxzxzxzxzx','2018-05-08'),(7,'aaa','sasas','2018-05-14 18:01:15','aasasasasa','aa','2018-05-14');
 /*!40000 ALTER TABLE `noticias` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-05-10 22:01:52
+-- Dump completed on 2018-05-14 20:17:11
